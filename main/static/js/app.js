@@ -2,7 +2,8 @@ const SESSION_KEY = new Uluru.enc.Hex().decode(new Uluru.Random().fill(new Uint8
 let enc_password = ""
 
 function setPass(passw) {
-    enc_password = Uluru.encrypt(passw, SESSION_KEY)
+    let padding = "1234567890_NO_MAGIC_NUMBERS_0987654321"
+    enc_password = Uluru.encrypt(Uluru.hash(`${padding}:${passw}:${padding}`), SESSION_KEY)
 }
 
 
