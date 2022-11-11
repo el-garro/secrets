@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secrets</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/uluru.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <img class="logo-img" src="img/logo-512x512.png" alt="">
+            <p>ecrets</p>
+            <nav>
+                <a href="https://github.com/el-garro/secrets" target="_blank" rel="noopener noreferrer"><img
+                        class="small-img" src="https://github.githubassets.com/favicons/favicon-dark.svg"
+                        alt="Source"></a>
+                <a href="https://el_garro.t.me" target="_blank" rel="noopener noreferrer"><img class="small-img"
+                        src="https://telegram.org/img/website_icon.svg" alt="Contact me..."></a>
+            </nav>
+        </div>
+        <h5>Your encrypted notes app and password manager (soon...maybe).</h5>
+    </header>
+    <main>
+        <div>
+            <h2>Your notes</h2>
+        </div>
+        <div class="grid-container" id="notes">
+        </div>
+    </main>
+    <div id="loginscreen" class="modal login">
+        <form id="frmLogin" onsubmit="frmLogin_OnSubmit(); return false">
+            <h2>Password</h2>
+            <input id="password" type="password" onkeyup="">
+            <button class="btn-big-pink" type="submit">Login</button>
+        </form>
+    </div>
+    <div id="editorscreen" class="modal" style="display: none;">
+        <div class="editor">
+            <textarea id="noteText" class="note-contents" autofocus></textarea>
+            <div class="editor-buttons">
+                <button id="btnSave" class="btn-big-pink"><img src="img/save_icon.png" alt=""></button>
+                <button id="btnDelete" class="btn-big-pink"><img src="img/delete_icon.png" alt=""></button>
+                <button id="btnClose" class="btn-big-pink" onclick="btnClose_OnClick()"><img src="img/cancel_icon.png"
+                        alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div id="popupscreen" class="modal" style="display: none;">
+        <div class="popup-message-box">
+            <button id="btnClosePopup" class="btn-big-pink" onclick="closePopup()"><img src="img/cancel_icon.png"
+                    alt=""></button>
+            <p id="popupText">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Made with ❤️ and ☕️, on Deta, for Deta.
+        </p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
